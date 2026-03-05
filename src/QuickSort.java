@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
-public class quickSort {
+public class QuickSort {
+
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
         System.out.println("give the length of the array to be sorted: ");
         int length = sc.nextInt();
@@ -16,7 +18,9 @@ public class quickSort {
             System.out.print(arr[i] + " ");
         }
     }
+
     public static void quickSort(int[] arr, int lowIndex, int highIndex){
+
         if (lowIndex >=highIndex)
             return;
         int pivot = arr[highIndex];
@@ -42,5 +46,4 @@ public class quickSort {
         quickSort(arr, lowIndex, leftPointer-1);
         quickSort(arr, leftPointer+1, highIndex);
     }
-
 }
